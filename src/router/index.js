@@ -19,6 +19,8 @@ const routes = [
   { path: '/opportunities/volunteering', name: 'opportunities-volunteering', component: () => import('@/views/OpportunitiesVolunteeringView.vue'), meta: { title: 'Volunteering' } },
   { path: '/opportunities/outreach', name: 'opportunities-outreach', component: () => import('@/views/OpportunitiesOutreachView.vue'), meta: { title: 'Outreach' } },
   { path: '/visit', name: 'visit', component: () => import('@/views/VisitView.vue'), meta: { title: 'Visit & Contact' } },
+  { path: '/index.html', redirect: '/' },
+  { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('@/views/NotFoundView.vue'), meta: { title: '404 — Page Not Found' } },
 ]
 
 const router = createRouter({
