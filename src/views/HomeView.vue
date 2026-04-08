@@ -272,6 +272,7 @@
   .research-band { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
+  .hero img { object-fit: cover; transform: none; }
   .hero-inner { flex-direction: column; align-items: flex-start; gap: 16px; padding: 24px; }
   .spread { grid-template-columns: 1fr; }
   .flow-about { grid-template-columns: 1fr; }

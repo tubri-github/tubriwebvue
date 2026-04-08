@@ -1,8 +1,7 @@
 <template>
   <SectionPage v-bind="page">
     <!-- Top row: 1 card centered -->
-    <div class="team-grid" style="grid-template-columns: repeat(3, 1fr);">
-      <div></div>
+    <div class="brian-row">
       <div class="member-card">
         <div class="member-card-img">
           <img src="/img/people/BrianS.jpg" alt="Brian L. Sidlauskas">
@@ -11,7 +10,6 @@
         <p class="role">Institute Director</p>
         <p class="contact"><a href="mailto:bsidlauskas@tulane.edu" title="bsidlauskas@tulane.edu">&#9993; Email</a></p>
       </div>
-      <div></div>
     </div>
 
     <!-- Bottom row of 3 -->
@@ -66,6 +64,13 @@ const page = {
   gap: 28px;
   margin-top: 32px;
 }
+.brian-row {
+  display: flex; justify-content: center;
+  margin-top: 32px;
+}
+.brian-row .member-card {
+  width: calc((100% - 56px) / 3);
+}
 .member-card { text-align: center; }
 .member-card-img {
   width: 100%; aspect-ratio: 1/1;
@@ -87,8 +92,11 @@ const page = {
 
 @media (max-width: 1024px) {
   .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .brian-row .member-card { width: calc((100% - 28px) / 2); }
 }
 @media (max-width: 768px) {
   .team-grid { grid-template-columns: 1fr; }
+  .brian-row .member-card { width: 100%; max-width: 260px; }
+  .member-card { max-width: 260px; margin-left: auto; margin-right: auto; }
 }
 </style>
