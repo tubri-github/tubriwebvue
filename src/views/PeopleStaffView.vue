@@ -19,7 +19,7 @@
         <h3>Henry L. Bart, Jr., PhD</h3>
         <p class="role">Former Director</p>
         <p class="bio">Dr. Bart is Former Director of TUBRI and continues to serve the institute in an advisory role, contributing to ongoing projects and helping guide future initiatives. An ichthyologist, his work has long focused on fish biodiversity, museum collections, and specimen-based research, and he remains an important part of the institute's scientific direction and development.</p>
-        <p class="contact"><a href="mailto:hbartjr@tulane.edu" title="hbartjr@tulane.edu">&#9993; Email</a></p>
+        <p class="contact"><a href="mailto:hbartjr@tulane.edu" title="hbartjr@tulane.edu">&#9993; Email</a><span class="contact-sep">|</span><a href="https://people.tubri.org/hank/" target="_blank" rel="noopener">&#128279; Personal Website</a></p>
       </div>
     </div>
 
@@ -130,7 +130,7 @@ const page = {
 }
 .member-featured-img img { width: 100%; height: 100%; object-fit: cover; }
 .member-featured h3 {
-  font-family: var(--f-heading);
+  font-family: var(--f-heading),serif;
   font-size: 24px; font-weight: 700; margin-bottom: 4px;
 }
 .member-featured .role {
@@ -145,6 +145,7 @@ const page = {
   margin-top: 12px; font-size: 14px; color: var(--c-text-muted);
 }
 .member-featured .contact a { color: var(--c-accent); }
+.member-featured .contact .contact-sep { margin: 0 10px; color: var(--c-text-muted); opacity: 0.6; }
 
 .section-label {
   font-size: 12px; text-transform: uppercase;
